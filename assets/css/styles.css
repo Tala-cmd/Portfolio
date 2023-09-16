@@ -300,6 +300,15 @@ box-shadow: 0 1px 16px rgba(0, 0, 0, 0.5);
 
 }
 
+/* Active link */
+.active-link{
+color: var(--white-color);
+}
+
+.active-link::after{
+width: 25%;
+}
+
 /* ======= Home ======= */
 
 .home__container{
