@@ -934,3 +934,40 @@ position: absolute;
 bottom: -25.6px;
 left:0;
 }
+
+/* ======= Footer ======= */
+
+.footer{
+background-color: var(--black-color);
+}
+
+.footer__container{
+padding-block: 48px 32px;
+row-gap: 40px;
+}
+
+.footer__links{
+display:flex;
+justify-content: center;
+column-gap: 32px;
+}
+
+.footer__link{
+color:var(--white-color);
+transition: color 0.4s;
+}
+
+.footer__link:hover{
+color:var(--text-color-light);
+}
+
+.footer__copy{
+color:var(--text-color-light);
+font-size: var(--small-font-size);
+text-align: center;
+}
+
+.footer__copy a{
+color: var(--white-color);
+font-weight: var(--font-medium);
+}
