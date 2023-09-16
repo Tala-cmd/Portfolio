@@ -926,3 +926,11 @@ transition: background-color 0.3s;
 .contact__social-link:hover{
 background-color: var(--first-color);
 }
+
+.contact__message{
+color: var(--white-color);
+font-size: var(--small-font-size);
+position: absolute;
+bottom: -25.6px;
+left:0;
+}

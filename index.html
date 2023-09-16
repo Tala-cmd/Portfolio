@@ -351,7 +351,7 @@
                     </p>
 
                     <p class="contact__description-2">
-                        I need your <b>Name</b> and <b>Email Address</b>, but you won't receive anything other that your replay.
+                        I need your <b>Name</b> and <b>Email Address</b>, but you won't receive anything other than your replay.
                     </p>
 
                     <div class="geometric-box"></div>
@@ -383,6 +383,8 @@
                             <textarea class="contact__input" name="user_message" id="message" required placeholder="Message"></textarea>
                             <label class="contact__label" for="message">Message</label>
                         </div>
+
+                        <p class="contact__message" id="contact-message"></p>
 
                         <button type="submit" class="contact__button button">
                             <i class="ri-mail-send-line"></i> Send Message
@@ -417,7 +419,10 @@
         </section>
 
     </main>
-
+    <!-- === Email JS === -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- === Main JS === -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>

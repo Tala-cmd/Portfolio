@@ -26,7 +26,7 @@ navMenu.classList.remove('show-menu');
 
 navLink.forEach(n => n.addEventListener ('click', linkAction));
 
-/* === SHOW HEADER === */
+/* === HEADER SHADOW === */
 
 const shadowHeader = () => {
 const header = document.getElementById('header');
@@ -34,3 +34,35 @@ const header = document.getElementById('header');
 this.scrollY >= 50? header.classList.add('shadow-header') : header.classList.remove('shadow-header');
 }
 window.addEventListener('scroll', shadowHeader)
+
+/* === EMAIL JS === */
+
+const contactForm= document.getElementById('contact-form');
+const contactMessage= document.getElementById('contact-message');
+
+const sendEmail = (e) =>{
+    e.preventDefault()
+
+    // serviceID - templateID - #form - publicKey
+    emailjs.sendForm('service_e2lh0ls', 'template_m651ted', '#contact-form', 'bV5I-JCc-ZOrumj7Y')
+    .then(() => {
+    //Show Sent Message
+    contactMessage.textContent='Message sent successfully ✓'
+
+    //Remove message after 5 seconds
+    setTimeout(() =>{
+    contactMessage.textContent=''}, 5000)
+    }, () =>{
+    //Show error message
+    contactMessage.textContent= 'Message sending failed (Service error) ✘'
+    }
+    
+    
+    )
+
+    //Clear input fields
+    contactForm.reset()
+}
+
+
+contactForm.addEventListener('submit', sendEmail)
