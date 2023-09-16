@@ -971,3 +971,44 @@ text-align: center;
 color: var(--white-color);
 font-weight: var(--font-medium);
 }
+
+/* ======= Scroll Bar ======= */
+
+::-webkit-scrollbar{
+width: 9.6px;
+border-radius: 8px ;
+background-color: #A6A6A6;
+}
+
+::-webkit-scrollbar-thumb{
+border-radius: 8px ;
+background-color: #8C8C8C;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background-color: #737373;
+}
+
+/* ======= Scroll Up ======= */
+
+.scrollup{
+position:fixed;
+right: 16px;
+bottom: -50%;
+background-color: var(--black-color);
+display:inline-flex;
+padding: 8px;
+font-size: 20px;
+color: var(--white-color);
+z-index: var(--z-tooltip);
+transition: bottom 0.4s, transform 0.4s, background-color 0.4s;
+}
+
+.scrollup:hover{
+transform: translateY(-8px); 
+}
+
+/* Show scroll up */
+.show-scroll{
+bottom: 48px;
+}
