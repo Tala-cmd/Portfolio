@@ -3,7 +3,7 @@
 :root{
 --header-height: 56px;
 
---first-color: #fc0362;
+--first-color: #fc0362; /* changed from rgb(252,61,3) */
 --black-color: black;
 --black-color-light: #666666;
 --white-color: #F2F2F2;
@@ -99,7 +99,7 @@ transition: color 0.3s;
 
 /* ======= Variables Dark theme ======= */
 body.dark-theme{
---first-color: #FC3D03;
+--first-color: #fc0362;;
 --black-color: #2E2E2E;
 --black-color-light: #4D4D4D;
 --title-color: #F2F2F2;
@@ -115,7 +115,7 @@ box-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
 
 .dark-theme .section__title-1::after,
 .dark-theme .section__title-2::after{
-background-color: rgba(217, 80, 38, 0.2);
+background-color: rgba(225, 81, 141, 0.527);
 }
 
 .dark-theme :is(.home__arrow, .home__line, .about__line){
@@ -123,7 +123,7 @@ filter: none;
 }
 
 .dark-theme .home__description b{
-background: linear-gradient(90deg, rgba(230, 73, 25, 0.3), rgba(230, 73, 25, 0));
+background: linear-gradient(90deg, rgba(225, 81, 141, 0.527), rgba(230, 73, 25, 0));
 }
 
 .dark-theme :is(.button__ghost, .services__icon i){
@@ -190,7 +190,7 @@ position: relative;
 content: '';
 width: 40px;
 height:28px;
-background-color:rgba(252, 61, 3, 0.2) ;
+background-color:rgba(225, 81, 141, 0.527) ;
 position: absolute;
 top: -4px;
 right:-8px;
@@ -451,9 +451,9 @@ position:absolute;
 left: -48px;
 top:0;
 bottom:0;
-margin: auto 0;
+margin: 60px 0; /* changed from auto 0 */
 display: grid;
-row-gap: 16px;
+row-gap: 10%; /* changed from 16px */
 }
 
 .home__social-link{
@@ -481,7 +481,7 @@ margin-bottom: 24px;
 }
 
 .home__description b{
-background: linear-gradient(90deg, rgba(252, 61, 3, 0.3), rgba(252, 61, 3, 0) );
+background: linear-gradient(90deg, rgba(225, 81, 141, 0.527), rgba(252, 61, 3, 0) );
 }
 
 .home__scroll{
