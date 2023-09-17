@@ -446,14 +446,14 @@ z-index: 10;
 }
 
 .home__social{
-height:max-content;
+
 position:absolute;
 left: -48px;
 top:0;
 bottom:0;
-margin: 60px 0; /* changed from auto 0 */
+margin: 100px 10px;
 display: grid;
-row-gap: 10%; /* changed from 16px */
+row-gap: 16px; 
 }
 
 .home__social-link{
