@@ -450,7 +450,6 @@ position:absolute;
 left: -48px;
 top:0;
 bottom:0;
-margin: auto 0;
 display: grid;
 row-gap: 16px;
 }
