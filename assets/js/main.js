@@ -105,6 +105,27 @@ const iconTheme = 'ri-sun-line';
 const selectedTheme = localStorage.getItem('selected-theme');
 const selectedIcon = localStorage.getItem('selected-icon');
 
+// Get a reference to the image element
+const themeImage = document.getElementById('theme-image');
+
+function changeImageBasedOnColorScheme() {
+    if (document.body.classList.contains(darkTheme)) {
+        // Dark mode detected, switch to dark mode image
+        themeImage.src = "assets/img/lang-2-removedbg.png";
+    } else {
+        // Light mode detected, use the default light mode image
+        themeImage.src = "assets/img/lang-1-removedbg.png";
+    }
+}
+
+// Function to get the currently selected image
+function getCurrentImage() {
+    return themeImage.src;
+}
+
+// Call the function initially to set the correct image
+changeImageBasedOnColorScheme();
+
 //We obtain the current theme that the interface has by validating the dark-theme class
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
@@ -125,9 +146,22 @@ themeButton.addEventListener('click', () =>{
     //We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme());
     localStorage.setItem('selected-icon', getCurrentIcon());
+    
+
+    // Call the function to change the image when the theme changes
+    changeImageBasedOnColorScheme();
+    localStorage.setItem('selected-image', getCurrentImage());
 })
 
-/* === SCROLL REVEAL ANIMATION === */
+// Retrieve and set the image based on local storage on page load
+const savedImage = localStorage.getItem('selected-image');
+console.log(savedImage);
+if (savedImage) {
+    themeImage.src = savedImage;
+}
+
+
+/* === SCROLL REVEAL ANIMATION === 
 const sr= ScrollReveal({
     origin:'top', 
     distance: '60px',
@@ -140,4 +174,4 @@ sr.reveal(`.home__profile, .about__image, .contact__mail`, {origin: 'right'})
 sr.reveal(`.home__name, .home__info, .about__container 
             .section__title-1, .about__info, .contact__social, .contact__data` 
             , {origin: 'left'})
-sr.reveal(`.services__card, .projects__card`, {interval: 100})
+sr.reveal(`.services__card, .projects__card`, {interval: 100})*/
