@@ -725,7 +725,7 @@ position: absolute;
 width: 24px;
 height: 24px;
 background-color: var(--first-color);
-right: -2px;
+right: -7px; /* changed from -2px; */
 top: -2px;
 }
 
