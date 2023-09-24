@@ -61,7 +61,7 @@ font-family: var(--body-font);
 font-size: var(--normal-font-size);
 background-color: var(--body-color);
 color: var(--text-color);
-transition: background-color 0.4s; /* For dark moe */
+transition: background-color 0.4s; /* For dark mode */
 }
 
 h1,h2,h3, h4{
@@ -756,9 +756,9 @@ margin-bottom: 12px;
 
 .projects__button{
 position:absolute;
-right:16px;
-bottom:-20px;
-padding: 16px;
+right:0px; /* changed from 16px */
+bottom: -50px; /* changed from -20px */
+padding: 12px 20px;
 }
 
 .projects__content{
