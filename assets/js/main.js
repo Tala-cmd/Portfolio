@@ -40,15 +40,17 @@ window.addEventListener('scroll', shadowHeader)
 const contactForm= document.getElementById('contact-form');
 const contactMessage= document.getElementById('contact-message');
 
+
 const sendEmail = (e) =>{
     e.preventDefault()
-
+    
     // serviceID - templateID - #form - publicKey
     emailjs.sendForm('service_e2lh0ls', 'template_m651ted', '#contact-form', 'bV5I-JCc-ZOrumj7Y')
+    
     .then(() => {
     //Show Sent Message
     contactMessage.textContent='Message sent successfully ✓'
-
+    
     //Remove message after 5 seconds
     setTimeout(() =>{
     contactMessage.textContent=''}, 5000)
@@ -161,17 +163,17 @@ if (savedImage) {
 }
 
 
-/* === SCROLL REVEAL ANIMATION === 
+/*=== SCROLL REVEAL ANIMATION ===  */ 
 const sr= ScrollReveal({
     origin:'top', 
     distance: '60px',
-    duration: 2500,
+    duration: 2000,
     delay:400,
-    reset: true //Animations repeat
+    //Animations repeat reset: true 
 })
 
 sr.reveal(`.home__profile, .about__image, .contact__mail`, {origin: 'right'})
 sr.reveal(`.home__name, .home__info, .about__container 
             .section__title-1, .about__info, .contact__social, .contact__data` 
             , {origin: 'left'})
-sr.reveal(`.services__card, .projects__card`, {interval: 100})*/
+sr.reveal(`.services__card, .projects__card`, {interval: 100})
