@@ -734,6 +734,10 @@ margin-bottom: 20px;
 }
 
 /* ======= Projects ======= */
+.projects__description{
+text-align: justify;
+}
+
 .projects{
 background-color: var(--container-color);
 transition: background-color 0.4s;
