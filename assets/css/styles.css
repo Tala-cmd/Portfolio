@@ -768,6 +768,15 @@ padding: 12px 20px;
 margin-bottom: 20px;
 }
 
+.projects__subtitle1{
+    position: relative;
+    display: inline-block;
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    margin-bottom: 7px;
+    
+}
+
 .projects__subtitle{
 position: relative;
 display: inline-block;
